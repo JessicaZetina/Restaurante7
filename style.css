@@ -220,7 +220,7 @@ body {
         background-position: 10px 50%;
     }
 }
-}
+
 
 /*Select every element*/
 [id^="item"] {
@@ -265,5 +265,4 @@ body {
 #item-3:target~.item-3 {
     z-index: 3;
     opacity: 1;
-}
 }
