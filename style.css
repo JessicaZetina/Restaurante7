@@ -1,0 +1,269 @@
+/* Icon 1 */
+
+.logo-restaurante {
+    padding-left: 40%;
+}
+.bolsa{
+    position: fixed;
+}
+.animated-icon1,
+.animated-icon2,
+.animated-icon3 {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger {
+    position: fixed;
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    padding: 20px 20px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    z-index: 1002;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.hamburger.is-active {
+    background-color: none;
+}
+
+._layer {
+    background: #333333;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    width: 50px;
+    height: 4px;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger:hover .-top {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.hamburger:hover .-bottom {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.hamburger.is-active .-top {
+    -webkit-transform: translateY(200%) rotate(45deg) !important;
+    -ms-transform: translateY(200%) rotate(45deg) !important;
+    transform: translateY(200%) rotate(45deg) !important;
+}
+
+.hamburger.is-active .-mid {
+    opacity: 0;
+}
+
+.hamburger.is-active .-bottom {
+    -webkit-transform: translateY(-200%) rotate(135deg) !important;
+    -ms-transform: translateY(-200%) rotate(135deg) !important;
+    transform: translateY(-200%) rotate(135deg) !important;
+}
+
+.menuppal.is_active {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.menuppal {
+    background-color: rgba(255, 255, 255, 0.95);
+    bottom: 0;
+    height: 60%;
+    height: 60%;
+    overflow-y: scroll;
+    position: fixed;
+    top: 10px;
+    transform: translate3d(0px, -100%, 0px);
+    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+    width: 100%;
+    z-index: 1001;
+    width: 60%;
+}
+
+.menuppal ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menuppal ul li {
+    margin: 5%;
+    list-style: none;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    line-height: 8em;
+    height: 4em;
+    color: #369;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.menuppal ul li a {
+    text-decoration: none;
+    color: rgb(32, 33, 34);
+}
+
+.menuppal ul li a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+.row-comida {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    float: left;
+    position: relative;
+    background-color: #00C794;
+    color: aliceblue;
+    font-size: 2.00em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row-text {
+    background-color: aliceblue;
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    float: right;
+    position: relative;
+    font-size: 2.0em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row-pide {
+    text-align: center;
+}
+
+/*Carrusel*/
+
+.carousel-wrapper {
+    height: 400px;
+    position: relative;
+    width: 600px;
+    margin: 200px;
+    padding-top: 10px;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev {
+    left: -30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+    right: -30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.light {
+    color: white;
+}
+
+@media (max-width: 480px) {
+
+    .arrow,
+    .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+    }
+}
+}
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('./img/Los-Especiales.png');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.20rem;
+    color: aliceblue;
+}
+
+.item-2 {
+    background: url('./img/PikPng\ 1.png');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.20rem;
+    color:  aliceblue;
+}
+
+.item-3 {
+    background: url('./img/images.jpeg');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.20rem;
+    color: aliceblue;
+}
+
+*:target~.item-1 {
+    opacity: 0;
+}
+
+#item-1:target~.item-1 {
+    opacity: 1;
+}
+
+#item-2:target~.item-2,
+#item-3:target~.item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+}
